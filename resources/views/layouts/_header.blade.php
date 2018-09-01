@@ -57,6 +57,8 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
+
+
                             <li>
                                 <a href="{{ route('users.show', Auth::id()) }}">
                                     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
