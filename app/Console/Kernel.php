@@ -30,6 +30,17 @@ class Kernel extends ConsoleKernel
         $schedule->command('larabbs:calculate-active-user')->hourly();
     }
 
+    protected function schedule(Schedule $schedule)
+    {
+        // 用户最后登陆时间记录
+        // $schedule->command('inspire')
+        //          ->hourly();
+        // 每隔一个小时执行一遍
+        $schedule->command('larabbs:calculate-active-user')->hourly();
+        // 每日零时执行一次
+        $schedule->command('larabbs:sync-user-actived-at')->dailyAt('00:00');
+    }
+
     /**
      * Register the commands for the application.
      *
