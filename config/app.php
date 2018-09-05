@@ -182,6 +182,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         // 短信发送
         App\Providers\EasySmsServiceProvider::class,
+        // 极光消息推送
+        App\Providers\JpushServiceProvider::class,
 
     ],
 
